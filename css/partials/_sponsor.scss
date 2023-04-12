@@ -1,0 +1,16 @@
+.sponsor {
+    margin-block: 3rem;
+
+    .sponsors {
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+    .sponsors a {
+        transition: all .3s;
+
+        &:hover {
+            transform:scale(1.1);
+        }
+    }
+}

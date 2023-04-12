@@ -1,0 +1,98 @@
+.hero {
+    color: #fff;
+    &__subtitle {
+        font-weight: bold;
+    }
+    &__title {
+        font-size: 50px;
+        font-weight: bold;
+    }
+    
+    button {
+        font-weight: bold;
+        background: 0;
+        border: 1px solid #fff;
+        border-radius: 1rem;
+        padding: .5rem;
+        color: #fff;
+        margin-right: .5rem;
+        &:hover {
+            background: #fff;
+            color: #000;
+        }
+    }
+
+    @include mobile {
+        &__subtitle {
+            font-weight: bold;
+        }
+
+        &__title {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        button {
+            margin-bottom: .5rem;
+        }
+        
+    }
+    
+    .cajas {
+        display: flex;
+        background-color: #333333;
+
+        @include mobile {
+            flex-direction: column;
+        }
+        .caja {
+            padding: 3rem;
+            margin: 1px;
+            background: #000;
+            display: flex;
+            gap: 1rem;
+    
+            &__img img {
+                max-width: 100px;
+            }
+
+            &__informacion {
+                @include flex(column, center, start);
+                line-height: 1rem;
+            }
+            
+            &__parrafo {
+                color: $herolima;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 1.4rem;
+            }
+
+            &__parra {
+                color: $herogris;
+                font-weight: bold;
+            }
+
+            &:hover {
+                background: #4e4e4e;
+            }
+        }
+    }
+}
+
+.navbarfix {
+    position: relative;
+}
+
+.noticias {
+    -webkit-animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both;
+    animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both;
+
+    @for $item from 1 through 4 {
+        &:nth-child(#{$item}) {
+            animation-delay: $item*0.2s;
+        }
+    }
+}
+
+ @-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}

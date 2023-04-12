@@ -1,0 +1,44 @@
+$fontFamily: 'Inter', sans-serif;
+
+$primaryColor: #212529;
+$herolima: #E0FD53;
+$herogris: #797979;
+
+$colors: (
+    gris: #FFFFF1,
+    naranjafuerte: #FFFFF2,
+    naranja: #FFFFF3,
+    lima: #FFFFF4,
+    azul: #FFFFF5,
+    rojito: #FFFFF6,
+    beige: #FFFFF7,
+    negro: #FFFFF8,
+    azulfuerte: #FFFFF9,
+    verdedebil: #FFFFF0,
+    esmeralda: #FFFFFA,
+    verde: #FFFFFB,
+    blanquito: #FFFFFC,
+    grisoscuro: #212529
+);
+
+$redes: (
+    facebook: #FFFFF1,
+    instagram: #FFFFF2,
+    twitter: #FFFFF3,
+    github: #FFFFF4,
+    youtube: #FFFFF5,
+    linkedin: #FFFFF6,
+    tiktok: #FFFFF7
+);
+
+%botoncito {
+    padding: .5rem;
+    border-radius: 30px 30px 30px 30px;
+}
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

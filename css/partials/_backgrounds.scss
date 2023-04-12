@@ -1,0 +1,100 @@
+.nosotros {
+    height: 95vh;
+    background-image: url("../img/nosotros_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    @include flex(column, center, start);
+
+    button {  
+        padding: .5rem;
+        border-radius: 1rem;
+        font-weight: bold;
+        font-size: 14px;
+        background-color: $primaryColor;
+        border: 0;
+        color: #fff;
+    }
+
+    @include mobile {
+        height: auto;
+        button {
+            display: none;
+        }
+        &__contenido {
+            margin: 2rem;
+        }
+    }
+}
+
+.variation {
+    height: 70vh;
+    background-image: url("../img/magic_background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2 {
+        font-size: 90px;
+        color: #fff;
+    }
+    
+    p {
+        font-size: 20px;
+        color: #fff;
+    }
+    
+    a {
+        width: 80px;
+    }    
+
+    @include mobile {
+        h2 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+.hero__inf {
+    height: 70vh;
+    background-image: url("../img/hero.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12rem 3rem;
+    text-align: left;
+
+    @include mobile {
+        background-image: url("../img/hero_mb.jpg");
+        height: auto;
+        padding: 4rem 3rem;
+    }
+}
+
+.nutricion {
+    height: 40vh;
+    background-image: url("../img/nutricion.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.suplementacion {
+    height: 40vh;
+    background-image: url("../img/papota.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contacto {
+    height: 40vh;
+    background-image: url("../img/contacto.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
